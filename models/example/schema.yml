@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: athlete_events
+    description: "Table containing athlete event data"
+    columns:
+      - name: ID
+        description: "Primary key for the athlete events table"
+        tests:
+          - unique
+          - not_null
+      - name: Name
+        description: "Name of the athlete"
+        tests:
+          - not_null
+      - name: Sex
+        description: "Gender of the athlete"
+        tests:
+          - not_null
+      - name: Age
+        description: "Age of the athlete"
+      - name: Height
+        description: "Height of the athlete in cm"
+      - name: Weight
+        description: "Weight of the athlete in kg"
+      - name: Team
+        description: "Team representing"
+        tests:
+          - not_null
+      - name: NOC
+        description: "National Olympic Committee representing"
+        tests:
+          - not_null
+      - name: Games
+        description: "Olympic Games"
+        tests:
+          - not_null
+      - name: Year
+        description: "Year of the Olympic Games"
+        tests:
+          - not_null
+      - name: Season
+        description: "Season of the Olympic Games (Summer/Winter)"
+        tests:
+          - not_null
+      - name: City
+        description: "City where the Olympic Games were held"
+        tests:
+          - not_null
+      - name: Sport
+        description: "Sport of the event"
+        tests:
+          - not_null
+      - name: Event
+        description: "Event description"
+        tests:
+          - not_null
+      - name: Medal
+        description: "Medal won by the athlete (Gold/Silver/Bronze/NA)"
+
+    # Optionally, specify unique and not_null constraints
+    # unique:
+    #   - ID
+    # not_null:
+    #   - Name
+    #   - Sex
+    #   - Team
+    #   - NOC
+    #   - Games
+    #   - Year
+    #   - Season
+    #   - City
+    #   - Sport
+    #   - Event

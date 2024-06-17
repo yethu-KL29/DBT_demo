@@ -1,0 +1,1 @@
+select * FROM {{source('olympics_data','athlete_events')}}

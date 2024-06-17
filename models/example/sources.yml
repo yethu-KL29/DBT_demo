@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: olympics_data
+    description: "raw data"
+    database: dbt_database
+    schema: public
+    tables:
+      - name: athlete_events
+        description: "test"
+        columns:
+          - name: ID
+            description: "The primary key for this table"
+            tests:
+              - not_null
